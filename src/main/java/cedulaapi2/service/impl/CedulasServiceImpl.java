@@ -10,6 +10,7 @@ import cedulaapi2.mapper.CedulasMapper;
 import cedulaapi2.repository.CedulasRepository;
 import cedulaapi2.service.CedulasService;
 import lombok.AllArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
