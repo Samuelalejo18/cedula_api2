@@ -16,6 +16,7 @@ public interface CedulasService {
 
     List<CedulasDto> getAllCedulasConAntecedentes();
 
+    List<CedulasDto> getAllCedulasSinAntecedentes();
 
 }
 

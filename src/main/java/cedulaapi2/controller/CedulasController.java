@@ -80,4 +80,12 @@ public class CedulasController {
 
         return ResponseEntity.ok(inactivos);
     }
+
+    @GetMapping("/sin-antecedentes")
+    public ResponseEntity<List<CedulasDto>> getCedulasSinAntecedentes() {
+        return ResponseEntity.ok(cedulasService.getAllCedulasSinAntecedentes());
+    }
+
+
+
 }

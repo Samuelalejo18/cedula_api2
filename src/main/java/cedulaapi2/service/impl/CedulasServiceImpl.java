@@ -85,17 +85,13 @@ public class CedulasServiceImpl implements CedulasService {
                 .collect(Collectors.toList());
     }
 
-
-
-    /*
-
-    public CedulasDto getByCedulas(String numCedula) {
-        Cedulas cedulas = cedulasRepository.findByCedula(numCedula)
-                .orElseThrow( () ->
-                        new ResourceNotFoundException("La cedula no existe" + numCedula));
-
-        return CedulasMapper.mapToCedulasDto(cedulas);
+    @Override
+    public List<CedulasDto> getAllCedulasSinAntecedentes() {
+        List<Cedulas> cedulas = cedulasRepository.findCedulasSinAntecedentes();
+        return cedulas.stream()
+                .map(CedulasMapper::mapToCedulasOnlyDto)
+                .collect(Collectors.toList());
     }
-    * */
+
 
 }
